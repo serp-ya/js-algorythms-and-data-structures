@@ -6,6 +6,8 @@ I welcome any comments and ideas in Issue!
 
 ## Algorythm Types
 - Sorting:
-  - [Bubble sort](./bubble-sort)
-  - [Selection sort](./selection-sort)
-  - [Insertion sort](./insertion-sort)
+  - [Bubble sort](./sorting/bubble-sort)
+  - [Selection sort](./sorting/selection-sort)
+  - [Insertion sort](./sorting/insertion-sort)
+- Math:
+  - [Euclidean algorithm](./sorting/euclidean-algorithm)

@@ -38,3 +38,37 @@ LinkedList.prototype.addToTail = function (value) {
 
   this.tail = newNode;
 };
+
+LinkedList.prototype.removeHead = function () {
+  if (!this.head) {
+    return null;
+  }
+
+  var removeNode = this.head;
+  this.head = removeNode.next;
+
+  if (this.head) {
+    this.head.prev = null;
+  } else {
+    this.tail = null;
+  }
+
+  return removeNode.value;
+};
+
+LinkedList.prototype.removeTail = function () {
+  if (!this.tail) {
+    return null;
+  }
+
+  var removeNode = this.tail;
+  this.tail = removeNode.prev;
+
+  if (this.tail) {
+    this.tail.next = null;
+  } else {
+    this.head = null;
+  }
+
+  return removeNode.value;
+};

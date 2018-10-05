@@ -75,7 +75,7 @@ LinkedList.prototype.removeTail = function () {
 
 LinkedList.prototype.search = function (searchValue) {
   var currentNode = this.head;
-  
+
   while(currentNode) {
     if (currentNode.value === searchValue) {
       return currentNode.value;
@@ -84,4 +84,20 @@ LinkedList.prototype.search = function (searchValue) {
   }
 
   return null;
-}
+};
+
+LinkedList.prototype.indexOf = function (value) {
+  var indexses = [];
+  var currentIndex = 0;
+  var currentNode = this.head;
+
+  while (currentNode) {
+    if (currentNode.value === value) {
+      indexses.push(currentIndex);
+    }
+    currentNode = currentNode.next;
+    currentIndex++;
+  }
+
+  return indexses;
+};

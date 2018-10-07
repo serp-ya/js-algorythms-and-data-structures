@@ -36,3 +36,11 @@ BST.prototype.contains = function (searchValue) {
     return this.right ? this.right.contains(searchValue) : false;
   }
 }
+
+BST.prototype.getMinValue = function () {
+  return this.left ? this.left.getMinValue() : this.value;
+};
+
+BST.prototype.getMaxValue = function () {
+  return this.right ? this.right.getMaxValue() : this.value;
+}

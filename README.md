@@ -14,3 +14,4 @@ I welcome any comments and ideas in Issue!
 
 ## Data Structure Types
 - [Linked List](./data-structures/linked-list)
+- [Binary Search Tree](./data-structures/binary-search-tree)

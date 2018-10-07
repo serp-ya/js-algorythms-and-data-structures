@@ -24,3 +24,15 @@ BST.prototype.insert = function (value) {
     this.right.insert(value);
   }
 };
+
+BST.prototype.contains = function (searchValue) {
+  if (this.value === searchValue) {
+    return true;
+  }
+
+  if (this.value > searchValue) {
+    return this.left ? this.left.contains(searchValue) : false;
+  } else {
+    return this.right ? this.right.contains(searchValue) : false;
+  }
+}

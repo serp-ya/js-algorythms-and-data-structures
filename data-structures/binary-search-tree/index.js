@@ -10,3 +10,17 @@ function BST(value) {
   this.right = null;
 }
 
+BST.prototype.insert = function (value) {
+  if (this.value >= value) {
+    if (!this.left) {
+      return this.left = new BST(value);
+    }
+    this.left.insert(value);
+
+  } else {
+    if (!this.right) {
+      return this.right = new BST(value);
+    }
+    this.right.insert(value);
+  }
+};

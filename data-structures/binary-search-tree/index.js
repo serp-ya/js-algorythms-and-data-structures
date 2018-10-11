@@ -44,3 +44,21 @@ BST.prototype.getMinValue = function () {
 BST.prototype.getMaxValue = function () {
   return this.right ? this.right.getMaxValue() : this.value;
 }
+
+BST.prototype.depthFirstTraversal = function (callback, order = 'in-order') {
+  if (order === 'pre-order') {
+    callback(this.value);
+  }
+  if (this.left) {
+    this.left.depthFirstTraversal(callback, order);
+  }
+  if (order === 'in-order') {
+    callback(this.value);
+  }
+  if (this.right) {
+    this.right.depthFirstTraversal(callback, order);
+  }
+  if (order === 'post-order') {
+    callback(this.value);
+  }
+};

@@ -62,3 +62,19 @@ BST.prototype.depthFirstTraversal = function (callback, order = 'in-order') {
     callback(this.value);
   }
 };
+
+BST.prototype.breadthFirstTraversal = function (callback) {
+  var nodes = [this];
+
+  while (nodes.length) {
+    var currentNode = nodes.shift();
+    callback(currentNode);
+
+    if (currentNode.left) {
+      nodes.push(currentNode.left);
+    }
+    if (currentNode.right) {
+      nodes.push(currentNode.right);
+    }
+  }
+};
